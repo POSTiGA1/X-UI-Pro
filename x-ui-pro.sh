@@ -468,9 +468,6 @@ tasks=(
 )
 crontab -l | grep -qE "x-ui" || { printf "%s\n" "${tasks[@]}" | crontab -; }
 ##################################https://yonggekkk.github.io/argosbx/###################################
-arpt="" anpt="" hypt="" tupt="" sspt="" warp="sx" ippz="4" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosbx/main/argosbx.sh)
-randname=$(gen_str).txt
-sudo cp /root/agsbx/jhsub.txt /var/www/html/$randname
 ##################################Show Details##########################################################
 sudo /usr/local/x-ui/x-ui setting -username "$XUIUSER" -password "$XUIPASS"
 if systemctl is-active --quiet x-ui || command -v x-ui &> /dev/null; then clear
@@ -499,9 +496,6 @@ if systemctl is-active --quiet x-ui || command -v x-ui &> /dev/null; then clear
 	msg_inf "XrayUI: https://${domain}${RNDSTR}"
 	msg_inf "V2rayA: https://${domain}/${RNDSTR2}/\n"
 	msg "Username: $XUIUSER\n Password: $XUIPASS"
-	hrline
-	msg_ok "ArgoSBX(SingBox) Configs Subscription URL:\n"
-	msg_inf "https://${domain}/${randname}"
 	hrline
 	msg_war "Note: Save This Screen!"	
 else
