@@ -497,6 +497,8 @@ if systemctl is-active --quiet x-ui || command -v x-ui &> /dev/null; then clear
 	msg_inf "V2rayA: https://${domain}/${RNDSTR2}/\n"
 	msg "Username: $XUIUSER\n Password: $XUIPASS"
 	hrline
+	msg_inf "ArgoSB Removed!"
+	hrline
 	msg_war "Note: Save This Screen!"	
 else
 	nginx -t && printf '0\n' | x-ui | grep --color=never -i ':'
